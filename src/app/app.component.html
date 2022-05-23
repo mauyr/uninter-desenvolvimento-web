@@ -1,0 +1,24 @@
+<html>
+  <body class="p-5">
+    <h1 class="mb-3">{{ title }}</h1>
+
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">RU</th>
+        <th scope="col">Curso</th>
+        <th scope="col">Data de aniversário</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let arquivo of lista">
+        <td>{{arquivo.nome}}</td>
+        <td>{{arquivo.ru}}</td>
+        <td>{{arquivo.nomeCurso}}</td>
+        <td>{{arquivo.dataAniversario | date: 'dd/MM/yyyy' }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
